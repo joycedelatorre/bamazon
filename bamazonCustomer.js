@@ -16,9 +16,7 @@ var connection = mysql.createConnection({
 connection.connect(function(err) {
   if (err) throw err;
   console.log("connected as id " + connection.threadId);
-  afterConnection();
-  
-  
+  afterConnection(); 
 });
 
 function afterConnection() {
@@ -70,8 +68,8 @@ function userInput(){
               //console.log(numOfItems);
               //console.log(order[0].stock_quantity);
               var updateStock = order[0].stock_quantity - numOfItems;
-              //console.log(updateStock);
-              var total = order[0].stock_quantity * numOfItems;
+              console.log("Quantity in Stock:" + updateStock);
+              var total = order[0].price * numOfItems;
               console.log("TOTAL:" + total);
 
               connection.query("UPDATE products SET stock_quantity="+updateStock+" WHERE item_id="+inputId+";", function(err, res){
