@@ -64,13 +64,15 @@ function userInput(){
               type:"input",
               message:"How many would you like to buy?"
             }).then(answers => {
-              console.log(answers);
+              //console.log(answers);
               var placeholder = answers.action
               var numOfItems = parseInt(placeholder);
-              console.log(numOfItems);
-              console.log(order[0].stock_quantity);
+              //console.log(numOfItems);
+              //console.log(order[0].stock_quantity);
               var updateStock = order[0].stock_quantity - numOfItems;
-              console.log(updateStock);
+              //console.log(updateStock);
+              var total = order[0].stock_quantity * numOfItems;
+              console.log("TOTAL:" + total);
 
               connection.query("UPDATE products SET stock_quantity="+updateStock+" WHERE item_id="+inputId+";", function(err, res){
                 console.log(err);
