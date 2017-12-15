@@ -5,14 +5,33 @@
 
 ## Customer View
 ---
+In the image below, the user should be able to pick an order by choosing an id, place an order and update the database by decreasing the stock quantity.
+
 ![alt text](https://github.com/joycedelatorre/bamazon/blob/master/images/UserPickItem_upadteQuantity.png "Customer View")
-In the image above the user should be able to pick an order by choosing and id, place an order and update the database by decreasing the stock quantity.
+
 
 If the user bought a depleted stock item. It should notify the customer that the product is out of stock. Example image is given below.
 
 ## Insufficient Product
 ---
 ![alt text](https://github.com/joycedelatorre/bamazon/blob/master/images/noAvailableStock.png "no available product")
+
+## Manager Product Sale
+---
+![alt text](https://github.com/joycedelatorre/bamazon/blob/master/images/ManagerProductSale.png "product sale")
+
+## Manager Low Inventory
+---
+![alt text](https://github.com/joycedelatorre/bamazon/blob/master/images/ManagerLowInventory.png "low inventory")
+
+## Manager Inventory
+---
+![alt text](https://github.com/joycedelatorre/bamazon/blob/master/images/ManagerLowInventory.png "Manager Inventory")
+
+## Manager Add New Product
+---
+[!alt text](https://github.com/joycedelatorre/bamazon/blob/master/images/ManagerAddNewProd.png "Add New Prod")
+
 
 
 
