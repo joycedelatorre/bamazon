@@ -49,7 +49,7 @@ function menu(){
 
 function viewProductSale(){
   console.log("view product sale");
-  connection.query("SELECT * FROM products", function(err, res){
+  connection.query("SELECT * FROM products WHERE stock_quantity != 0 AND stock_quantity IS NOT NULL", function(err, res){
     for(var i = 0; i < res.length; i++){
       console.log("id: " + res[i].item_id + " || item: " + res[i].product_name +" || Price: " + res[i].price + " || Stock: " + res[i].stock_quantity);   
     }
@@ -59,9 +59,11 @@ function viewProductSale(){
 
 function viewLowInventory(){
   console.log("view low inventory");
-  connection.query ("SELECT * FROM products", function(err,res){
-
-  })
+  connection.query ("SELECT * FROM products WHERE stock_quantity < 5 OR stock_quantity IS NULL", function(err,res){ // IS NULL --- doesn't work for stock_quantity != null
+    for(var i = 0; i < res.length; i++){
+      console.log("id: " + res[i].item_id + " || item: " + res[i].product_name + " || Stock: " + res[i].stock_quantity);
+    }
+  });
 
 }
 
