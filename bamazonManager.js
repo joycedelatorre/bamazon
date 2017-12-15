@@ -73,38 +73,45 @@ function inventory(){
 }
 
 function newProduct(){
-  console.log("view new product");
-  var product_name;
-  var price;
-  var stock_quantity;
+  //console.log("view new product");
+  var name;
+  var department;
+  var tagPrice;
+  var quantity;
 
   inquirer.prompt([
     {
-      name:"action",
+      name:"action1",
       type:"input",
       message:"What is the product name?",
     },
     {
-      name:"action",
+      name:"action2",
       type:"input",
       message:"What department does this product belong to?",
     },
     {
-      name:"action",
+      name:"action3",
       type:"input",
       message:"What is the price for this product?",
     },
     {
-      name:"action",
+      name:"action4",
       type:"input",
       message:"How many stocks do you have?"
     }
- 
   ]).then(answers => {
-    product_name = answers.action;
-    }
+      name = answers.action1;
+      console.log(name);
+      department = answers.action2;
+      console.log(department);
+      tagPrice = answers.action3;
+      console.log(tagPrice);
+      quantity = answers.action4;
+      console.log(quantity);
+      connection.query("INSERT INTO products(product_name, depart_name, price, stock_quantity) VALUES ('"+ name+"','"+department+"','"+ tagPrice+"','"+ quantity+ "')",function(err, res){
+        console.log(err);
+        console.log(res);
+      });
   });
-
-
-
 }
