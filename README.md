@@ -26,7 +26,7 @@ If the user bought a depleted stock item. It should notify the customer that the
 
 ## Manager Inventory
 ---
-![alt text](https://github.com/joycedelatorre/bamazon/blob/master/images/ManagerLowInventory.png "Manager Inventory")
+![alt text](https://github.com/joycedelatorre/bamazon/blob/master/images/ManagerInventory.png "Manager Inventory")
 
 ## Manager Add New Product
 ---
