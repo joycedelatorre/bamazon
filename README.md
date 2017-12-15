@@ -5,12 +5,13 @@
 
 ## Customer View
 ---
-![customer View]:https://github.com/joycedelatorre/bamazon/blob/master/images/UserPickItem_upadteQuantity.png
+![alt text](https://github.com/joycedelatorre/bamazon/blob/master/images/UserPickItem_upadteQuantity.png "Customer View")
 ### In the image above the user should be able to pick an order by choosing and id, place an order and update the database by decreasing the stock quantity.
 
 ### If the user bought a depleted stock item. It should notify the customer that the product is out of stock. Example image is given below.
 
-Inline-style:
+## Insufficient Product
+---
 ![alt text](https://github.com/joycedelatorre/bamazon/blob/master/images/noAvailableStock.png "no available product")
 
 
