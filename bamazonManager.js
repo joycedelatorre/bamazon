@@ -74,5 +74,37 @@ function inventory(){
 
 function newProduct(){
   console.log("view new product");
+  var product_name;
+  var price;
+  var stock_quantity;
+
+  inquirer.prompt([
+    {
+      name:"action",
+      type:"input",
+      message:"What is the product name?",
+    },
+    {
+      name:"action",
+      type:"input",
+      message:"What department does this product belong to?",
+    },
+    {
+      name:"action",
+      type:"input",
+      message:"What is the price for this product?",
+    },
+    {
+      name:"action",
+      type:"input",
+      message:"How many stocks do you have?"
+    }
+ 
+  ]).then(answers => {
+    product_name = answers.action;
+    }
+  });
+
+
 
 }
