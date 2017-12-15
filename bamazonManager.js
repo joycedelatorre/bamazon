@@ -51,8 +51,7 @@ function viewProductSale(){
   console.log("view product sale");
   connection.query("SELECT * FROM products", function(err, res){
     for(var i = 0; i < res.length; i++){
-      console.log("id: " + res[i].item_id + " || item: " + res[i].product_name +" || Price: " + res[i].price + " || Stock: " + res[i].stock_quantity);
-      
+      console.log("id: " + res[i].item_id + " || item: " + res[i].product_name +" || Price: " + res[i].price + " || Stock: " + res[i].stock_quantity);   
     }
   });
 
@@ -61,7 +60,7 @@ function viewProductSale(){
 function viewLowInventory(){
   console.log("view low inventory");
   connection.query ("SELECT * FROM products", function(err,res){
-    
+
   })
 
 }
